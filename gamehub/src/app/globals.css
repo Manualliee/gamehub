@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #0d1b2a;
+  --color-foreground: #e0e1dd;
+  --color-card: #1b263b;
+  --color-primary: #415a77;
+  --color-muted: #778da9;
+  --color-accent: #415a77;
+  --color-border: #778da9;
+  --color-ring: #415a77;
+  --color-destructive: #dc2626;
+}
+
+:root {
+  --background: #0d1b2a;
+  --foreground: #e0e1dd;
+  --card: #1b263b;
+  --primary: #415a77;
+  --muted: #778da9;
+  --accent: #415a77;
+  --border: #778da9;
+  --ring: #415a77;
+  --destructive: #dc2626;
+  --navbar-height: 256px;
+}
+
+body {
+  background-color: #0d1b2a;
+  color: #e0e1dd;
+  font-family: var(--font-montserrat), system-ui, sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-background);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-accent);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.sad-face-container {
+  width: 100px;
+  height: 100px;
+  border: 3px solid var(--color-primary);
+  border-radius: 50%;
+  position: relative;
+  margin: 20px auto;
+
+  .eye {
+    width: 25px;
+    height: 15px;
+    background-color: var(--color-primary);
+    border-radius: 0 0 100px 100px;
+    overflow: hidden;
+    position: absolute;
+    top: 50px;
+
+    &.left-eye {
+      left: 16px;
+      rotate: -30deg;
+    }
+
+    &.right-eye {
+      right: 16px;
+      rotate: 30deg;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  :root {
+    --navbar-height: 128px;
+  }
+}
